@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Drink water reminder application.">
+    <meta name="theme-color" content="#1e1e1e">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-title" content="Pee &amp; See">     
+
+    <title>Flavor Awesome</title>
+
+    <link href="flavor.css" rel="stylesheet">    
+
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        box-sizing: border-box;
+        display: flex;
+        flex-basis: 0;
+        flex-direction: row;
+        flex-grow: 1;
+      }
+
+      nav {
+        box-sizing: border-box;
+        border-right: solid 1px black;
+        width: 300px;
+      }
+
+      section {
+        box-sizing: border-box;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+
+      section:first-of-type {
+        border-right: solid 1px black;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <main>
+      <nav>
+        <ul>
+          <li>
+            <p>Beer <span>1</span></p>
+          </li>
+          <li>
+            <p>Cigars <span>1</span></p>
+          </li>
+        </ul>
+        <p>Trash <span>1</span></p>
+      </nav>
+      <section></section>
+      <section></section>
+    </main>
+
+  </body>
+</html>

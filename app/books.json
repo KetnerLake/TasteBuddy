@@ -1,0 +1,243 @@
+{
+  "name": "Taste Buddy",
+  "version": 28,
+  "tastes": [
+    {
+      "id": "beer",
+      "primary": "#FFD600",
+      "secondary": "#000000",
+      "phrase": "Bottles of Beer",
+      "singular": "Beer",
+      "plural": "Beer",
+      "fields": [
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "photo_camera",
+          "is-key": false,
+          "kind": "photo-group",
+          "label": "Photos",
+          "name": "photos",
+          "options": null
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "label",
+          "is-key": true,
+          "kind": "text-input",
+          "label": "Beer name",
+          "name": "name",
+          "options": null,
+          "units": "mmHg",
+          "theme": "yellow"
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "business",
+          "is-key": true,
+          "kind": "text-input",
+          "label": "Brewer",
+          "name": "brewer",
+          "options": null
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "emoji_flags",
+          "is-key": true,
+          "kind": "text-input",
+          "label": "Origin",
+          "name": "origin",
+          "options": null
+        },
+        {
+          "cancelable": false,
+          "hidden": false,
+          "hint": null,
+          "icon": "attach_money",
+          "is-key": false,
+          "kind": "price-input",
+          "label": "Price",
+          "name": "price",
+          "options": null
+        },
+        {
+          "cancelable": false,
+          "hidden": false,
+          "hint": null,
+          "icon": "event",
+          "is-key": false,
+          "kind": "date-picker",
+          "label": "Sampled",
+          "name": "sampled",
+          "options": null
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "place",
+          "is-key": true,
+          "kind": "text-input",
+          "label": "Location",
+          "name": "location",
+          "options": null
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "stars",
+          "is-key": true,
+          "kind": "rating",
+          "label": "Rating",
+          "name": "rating",
+          "options": null
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "sports_bar",
+          "is-key": false,
+          "kind": "radio-group",
+          "label": "Serving Type",
+          "name": "serving",
+          "options": [
+            "Draft",
+            "Cask",
+            "Bottle",
+            "Can",
+            "Growler"
+          ]
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "bubble_chart",
+          "is-key": false,
+          "kind": "meter",
+          "label": "Bubble Meter",
+          "name": "bubbles",
+          "options": [
+            "High",
+            "Sparkling",
+            "Medium",
+            "Still"
+          ]
+        },
+        {
+          "cancelable": true,
+          "hidden": false,
+          "hint": null,
+          "icon": "leaderboard",
+          "is-key": false,
+          "kind": "flavor-wheel",
+          "label": "Flavor Wheel",
+          "name": "profile",
+          "options": [
+            "Alcohol",
+            "Dark Fruit",
+            "Citrus Fruit",
+            "Hoppy",
+            "Floral",
+            "Spicy",
+            "Herbal",
+            "Malty",
+            "Toffee",
+            "Burnt",
+            "Sweet",
+            "Sour",
+            "Bitter",
+            "Dry",
+            "Body",
+            "Linger"
+          ]
+        },
+        {
+          "cancelable": true,
+          "format": true,
+          "hidden": false,
+          "hint": "International Bitterness Units",
+          "icon": "assessment",
+          "is-key": false,
+          "kind": "number-input",
+          "label": "IBU",
+          "name": "ibu",
+          "options": null,
+          "suffix": null
+        },
+        {
+          "cancelable": true,
+          "format": true,
+          "hidden": false,
+          "hint": "Alcohol by Volume",
+          "icon": null,
+          "is-key": false,
+          "kind": "decimal-input",
+          "label": "ABV",
+          "name": "abv",
+          "options": null,
+          "suffix": "%"
+        },
+        {
+          "cancelable": true,
+          "format": true,
+          "hidden": false,
+          "hint": "Original Gravity",
+          "icon": null,
+          "is-key": false,
+          "kind": "decimal-input",
+          "label": "OG",
+          "name": "og",
+          "options": null,
+          "suffix": "g/cm³"
+        },
+        {
+          "cancelable": true,
+          "format": true,
+          "hidden": false,
+          "hint": "Terminal Gravity",
+          "icon": null,
+          "is-key": false,
+          "kind": "decimal-input",
+          "label": "TG",
+          "name": "tg",
+          "options": null,
+          "suffix": "g/cm³"
+        },
+        {
+          "cancelable": true,
+          "format": true,
+          "hidden": false,
+          "hint": "Standard Reference Model",
+          "icon": null,
+          "is-key": false,
+          "kind": "decimal-input",
+          "label": "SRM",
+          "name": "srm",
+          "options": null,
+          "suffix": null
+        },
+        {
+          "cancelable": false,
+          "hidden": false,
+          "hint": null,
+          "icon": "text_snippet",
+          "is-key": true,
+          "kind": "text-area",
+          "label": "Notes",
+          "name": "notes",
+          "options": null
+        }
+      ]
+    }
+  ]
+}

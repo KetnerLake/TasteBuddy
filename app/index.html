@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Taste Buddy</title>
+
+  <link href="./views/form.css" rel="stylesheet" />
+  <link href="./views/main.css" rel="stylesheet" />
+  <link href="./style/colors.css" rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-weight: 400;  
+      src: url( './fonts/Plex/Sans/IBMPlexSans-Regular.woff2' ) format( 'woff2' );
+    }
+
+    @font-face {
+      font-family: 'IBM Plex Sans';
+      font-weight: 600;  
+      src: url( './fonts/Plex/Sans/IBMPlexSans-SemiBold.woff2' ) format( 'woff2' );
+    }
+
+    @font-face {
+      font-family: 'Material Symbols';
+      src: url( './fonts/Material Symbols/MaterialSymbolsOutlined-VariableFont_FILL,GRAD,opsz,wght.ttf' );
+    }
+
+    :root {
+      --taste-primary-color: var( --yellow-9 );
+      --taste-secondary-color: #000000;
+    }
+
+    html {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      height: 100%;
+    }
+
+    body {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin: 0;
+      padding: 0;  
+    }
+
+    button {
+      align-items: center;
+      background: none;
+      background: var( --taste-primary-color );
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      justify-content: center;
+      margin: 0;
+      outline: none;
+      padding: 0;
+    }
+
+    button.icon {
+      font-family: 'Material Symbols';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: normal;
+      /* font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; */
+      width: 40px;
+    }
+
+    [hidden] {
+      display: none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <tb-main>
+
+    <header>
+      <div>
+        <button class="icon" type="button">menu</button>
+        <button class="icon" type="button">search</button>              
+      </div>
+      <h3>Bottles of Beer</h3>
+      <ul>
+        <li>
+          <p>33</p>
+          <p>Reviews</p>
+        </li>
+        <li>
+          <p>3</p>
+          <p>Places</p>
+        </li>        
+      </ul>
+    </header>
+
+    <tb-stack>
+      <article>
+        <ul>
+          <li>Review</li>
+        </ul>
+      </article>
+      <article hidden>Photos</article>
+      <article hidden>Map</article>
+      <article hidden>Collections</article>    
+    </tb-stack>
+
+    <footer>
+      <button type="button">Timeline</button>
+      <button type="button">Photos</button>      
+      <button type="button">Add</button>            
+      <button type="button">Map</button>      
+      <button type="button">Collections</button>      
+    </footer>
+
+  </tb-main>
+  <tb-detail>
+
+    <header></header>
+    <tb-form>
+      <!--
+      <tb-photo-group></tb-photo-group>
+      <tb-text-input value="Beer"></tb-text-input>
+      <tb-text-input value="Brewer"></tb-text-input>
+      <tb-date-picker></tb-date-picker>
+      <tb-price-input></tb-price-input>  
+      <tb-rating value="4"></tb-rating>  
+      <tb-level></tb-level>        
+      <tb-radio-group></tb-radio-group>    
+      <tb-meter></tb-meter>    
+      <tb-temperature></tb-temperature>    
+      <tb-flavor-wheel></tb-flavor-wheel>
+      <tb-decimal-input value="ABV"></tb-decimal-input>      
+      <tb-number-input value="IBU"></tb-number-input>      
+      <tb-decimal-input value="OG"></tb-decimal-input>      
+      <tb-decimal-input value="TG"></tb-decimal-input>              
+      <tb-text-area value="Area"></tb-text-area>      
+      -->    
+    </tb-form>
+
+  </section>
+
+  <!-- Navigation -->
+  <tb-navigation>
+    <header></header>
+    <ul></ul>
+  </tb-navigation>
+
+  <template id="review_list_renderer">
+
+  </template>
+
+  <template id="photo_list_renderer">
+
+  </template>
+
+  <script src="./components/tastebuddy.js" type="module"></script>
+  <script src="./views/form.js"></script>
+  <script src="./views/navigation.js"></script>
+  <script src="./views/stack.js"></script>
+
+  <script>
+    const form = document.querySelector( 'tb-form' );
+    const navigation = document.querySelector( 'tb-navigation' );
+
+    fetch( './books.json' )
+    .then( ( response ) => response.json() )
+    .then( ( data ) => {
+      form.data = data.tastes[0].fields
+      console.log( form.value );
+      navigation.data = data.tastes.map( ( value ) => {
+        return {
+          name: value.singular,
+          count: 0
+        }
+      } );
+    } );
+  </script>
+
+</body>
+</html> 
